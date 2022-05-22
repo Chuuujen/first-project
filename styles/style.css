@@ -16,6 +16,17 @@
 
 21/05/2022(0.1.5)
 1.fixed class names
+
+22/05/2022(0.1.6)
+1.made section-title & section-subtitle classes, used in 'digits' 
+and 'kaufman' (old classes deleted)
+2.class table_theme_dark replaced modifiers for kaufman' and digits' titles/subtitles,
+also replaced unnecessary modifiers in kaufman table (old modifiers deleted)
+3.updated table_theme_dark modifier, added position attribute in order to make modified
+elements to be on a top layer (z-index used)
+4.updated positioning in kaufman block: used padding instead of element's margining for
+proper work of section-title & section-subtitle classes
+
     Best wishes to the reviewer :D
 */
 .page {
@@ -147,20 +158,22 @@
 .digits {
     width: 100%;
     margin: 0 auto;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.digits__title {
+.section-title {
+    margin: 0 auto;
     width: 60%;
-    margin: 100px auto 20px;
     font-size: 60px;
     font-weight: bold;
     line-height: 1.15;
     text-align: center;
 }
 
-.digits__subtitle {
-    width: 60%;
+.section-subtitle {
     margin: 20px auto 0;
+    width: 60%;
     font-size: 24px;
     font-weight: normal;
     line-height: 34px;
@@ -169,7 +182,7 @@
 
 .table {
     width: 1100px;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     padding: 0;
     list-style-type: none;
     display: flex;
@@ -251,39 +264,10 @@
     overflow: hidden;
 }
 
-.kaufman__title {
-    margin: 0 auto 20px;
-    width: 60%;
-    font-size: 60px;
-    font-weight: bold;
-    line-height: 1.15;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.kaufman__title_theme_dark {
-    color: white;
-}
-
-.kaufman__subtitle {
-    margin: 0 auto;
-    width: 60%;
-    font-size: 24px;
-    font-weight: normal;
-    line-height: 34px;
-    text-align: center;
-    position: relative;
-    z-index: 1;
-}
-
-.kaufman__subtitle_theme_dark {
-    color: white;
-}
-
 .table_theme_dark {
-    margin-bottom: 0;
     color: white;
+    position: relative;
+    z-index: 1;
 }
 
 .table__cell_theme_dark {
@@ -291,15 +275,6 @@
     width: 200px;
 }
 
-.table__heading_theme_dark {
-    position: relative;
-    z-index: 1;
-}
-
-.table__text_theme_dark {
-    position: relative;
-    z-index: 1;
-}
 
 .kaufman__triangle {
     width: 877px;
